@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+locale: "fr"
+
+collections:
+  - name: "guest_houses"
+    label: "Guest houses"
+    files:
+      - file: "data.json"
+        label: "Liste des guest houses"
+        name: "guest_houses_data"
+        fields:
+          - label: "Guest houses"
+            name: "guest_houses"
+            widget: "list"
+            label_singular: "Guest house"
+            summary: "{{fields.name}} — {{fields.city}}"
+            fields:
+              - { label: "Nom de l'établissement", name: "name", widget: "string" }
+              - { label: "Ville", name: "city", widget: "string" }
+              - label: "Département"
+                name: "department"
+                widget: "select"
+                options:
+                  [
+                    "Alibori", "Atacora", "Atlantique", "Borgou", "Collines",
+                    "Couffo", "Donga", "Littoral", "Mono", "Ouémé", "Plateau", "Zou",
+                  ]
+              - { label: "Prix par nuit (FCFA)", name: "pricePerNight", widget: "number", value_type: "int" }
+              - label: "Numéro WhatsApp"
+                name: "whatsapp"
+                widget: "string"
+                hint: "Format international sans le +, ex: 22990000000"
+              - label: "Équipements"
+                name: "amenities"
+                widget: "list"
+                hint: "Un équipement par ligne, ex: Wi-Fi, Climatisation..."
+              - { label: "Description", name: "description", widget: "text" }

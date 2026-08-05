@@ -89,5 +89,19 @@ searchForm.addEventListener('submit', (e) => {
 
 cityFilter.addEventListener('change', applyFilters);
 
-populateCityFilter();
-render(GUEST_HOUSES);
+let GUEST_HOUSES = [];
+
+async function init() {
+  try {
+    const response = await fetch('data.json');
+    const data = await response.json();
+    GUEST_HOUSES = data.guest_houses || [];
+  } catch (err) {
+    grid.innerHTML = `<div class="empty-state">Impossible de charger les guest houses pour le moment.</div>`;
+    return;
+  }
+  populateCityFilter();
+  render(GUEST_HOUSES);
+}
+
+init();
