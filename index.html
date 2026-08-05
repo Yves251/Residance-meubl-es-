@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case & Cauris — Guest houses du Bénin</title>
+  <meta name="description" content="Trouve et réserve une guest house partout au Bénin, dans les 12 départements — pour voyageurs locaux et internationaux." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">Case<span>&</span>Cauris</a>
+      <nav class="site-nav">
+        <a href="#listing">Guest houses</a>
+        <a href="#a-propos">À propos</a>
+      </nav>
+    </div>
+  </header>
+  <div class="motif-strip"></div>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Trouve ta prochaine <em>guest house</em>, partout au Bénin</h1>
+      <p class="lede">
+        Que tu voyages depuis l'étranger ou à l'intérieur du pays, découvre des
+        guest houses dans les 12 départements du Bénin et demande ta réservation
+        directement sur WhatsApp.
+      </p>
+
+      <form id="search-form" class="search-panel">
+        <select id="city-filter" aria-label="Filtrer par département">
+          <option value="">Tous les départements</option>
+        </select>
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Rechercher un nom, un quartier..."
+          aria-label="Rechercher"
+        />
+        <button type="submit">Rechercher</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="listing-section" id="listing">
+    <div class="container">
+      <div class="listing-header">
+        <h2>Guest houses disponibles</h2>
+        <span id="result-count" class="result-count"></span>
+      </div>
+      <div id="grid" class="grid"></div>
+    </div>
+  </section>
+
+  <footer id="a-propos">
+    <div class="container">
+      <div><strong>Case & Cauris</strong><br>Annuaire de guest houses au Bénin.</div>
+      <div>Les demandes de réservation sont envoyées directement au propriétaire par WhatsApp.<br>Le paiement se règle avec l'établissement, hors de l'application.</div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
