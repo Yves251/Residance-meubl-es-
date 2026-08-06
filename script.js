@@ -37,17 +37,15 @@ function populateCityFilter() {
   });
 }
 
-function renderDepartmentTiles(departmentsData) {
-  const photoByName = {};
-  (departmentsData || []).forEach((d) => { photoByName[d.name] = d.photo; });
-
-  departmentGrid.innerHTML = DEPARTMENTS.map((dep) => {
-    const photo = photoByName[dep];
-    const img = photo ? `<img src="${photo}" alt="${dep}">` : '';
+function renderDepartmentTiles(departments) {
+  departmentGrid.innerHTML = DEPARTMENTS.map((depName) => {
+    const dep = (departments || []).find((d) => d.name === depName);
+    const photo = dep && dep.photo;
+    const img = photo ? `<img src="${photo}" alt="${depName}">` : '';
     return `
-      <button type="button" class="department-tile" data-department="${dep}">
+      <button type="button" class="department-tile" data-department="${depName}">
         ${img}
-        <span>${dep}</span>
+        <span>${depName}</span>
       </button>
     `;
   }).join('');
@@ -174,18 +172,18 @@ document.getElementById('modal-close').addEventListener('click', closeDetails);
 
 async function init() {
   try {
-    const [ghResponse, depResponse] = await Promise.all([
-      fetch('data.json'),
-      fetch('departments.json').catch(() => null),
-    ]);
-    const ghData = await ghResponse.json();
-    GUEST_HOUSES = ghData.guest_houses || [];
+    const response = await fetch('departments.json');
+    const data = await response.json();
+    const departments = data.departments || [];
 
-    let depData = { departments: [] };
-    if (depResponse && depResponse.ok) {
-      depData = await depResponse.json();
-    }
-    renderDepartmentTiles(depData.departments);
+    GUEST_HOUSES = [];
+    departments.forEach((dep) => {
+      (dep.apartments || []).forEach((apt) => {
+        GUEST_HOUSES.push({ ...apt, department: dep.name });
+      });
+    });
+
+    renderDepartmentTiles(departments);
   } catch (err) {
     grid.innerHTML = `<div class="empty-state">Impossible de charger les guest houses pour le moment.</div>`;
     return;
