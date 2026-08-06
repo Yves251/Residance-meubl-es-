@@ -35,9 +35,13 @@ function whatsappLink(guestHouse) {
 }
 
 function renderCard(g) {
+  const photo = g.photo
+    ? `<img src="${g.photo}" alt="${g.name}" loading="lazy">`
+    : `Photo à venir`;
+
   return `
     <article class="card">
-      <div class="card-photo">Photo à venir</div>
+      <div class="card-photo">${photo}</div>
       <div class="card-body">
         <span class="card-city">${g.city} · ${g.department}</span>
         <h3 class="card-title">${g.name}</h3>
