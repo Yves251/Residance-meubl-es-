@@ -23,7 +23,12 @@ collections:
             label_singular: "Guest house"
             summary: "{{fields.name}} — {{fields.city}}"
             fields:
-              - { label: "Photo", name: "photo", widget: "image", required: false, hint: "Optionnel — une image de l'établissement" }
+              - label: "Photos"
+                name: "photos"
+                widget: "list"
+                required: false
+                hint: "Ajoute une ou plusieurs photos. Les 2 premières s'affichent sur la fiche, les autres dans le détail."
+                field: { label: "Photo", name: "image", widget: "image" }
               - { label: "Nom de l'établissement", name: "name", widget: "string" }
               - { label: "Ville", name: "city", widget: "string" }
               - label: "Département"
@@ -44,3 +49,24 @@ collections:
                 widget: "list"
                 hint: "Un équipement par ligne, ex: Wi-Fi, Climatisation..."
               - { label: "Description", name: "description", widget: "text" }
+
+  - name: "departments"
+    label: "Départements"
+    files:
+      - file: "departments.json"
+        label: "Photos des départements"
+        name: "departments_data"
+        fields:
+          - label: "Départements"
+            name: "departments"
+            widget: "list"
+            fields:
+              - label: "Nom"
+                name: "name"
+                widget: "select"
+                options:
+                  [
+                    "Alibori", "Atacora", "Atlantique", "Borgou", "Collines",
+                    "Couffo", "Donga", "Littoral", "Mono", "Ouémé", "Plateau", "Zou",
+                  ]
+              - { label: "Photo", name: "photo", widget: "image", required: false }

@@ -1,0 +1,16 @@
+{
+  "departments": [
+    { "name": "Alibori", "photo": "" },
+    { "name": "Atacora", "photo": "" },
+    { "name": "Atlantique", "photo": "" },
+    { "name": "Borgou", "photo": "" },
+    { "name": "Collines", "photo": "" },
+    { "name": "Couffo", "photo": "" },
+    { "name": "Donga", "photo": "" },
+    { "name": "Littoral", "photo": "" },
+    { "name": "Mono", "photo": "" },
+    { "name": "Ouémé", "photo": "" },
+    { "name": "Plateau", "photo": "" },
+    { "name": "Zou", "photo": "" }
+  ]
+}

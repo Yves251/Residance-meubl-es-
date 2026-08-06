@@ -44,6 +44,13 @@
     </div>
   </section>
 
+  <section class="departments-section">
+    <div class="container">
+      <h2>Explorer par département</h2>
+      <div id="department-grid" class="department-grid"></div>
+    </div>
+  </section>
+
   <section class="listing-section" id="listing">
     <div class="container">
       <div class="listing-header">
@@ -61,7 +68,13 @@
     </div>
   </footer>
 
-  <script src="data.js"></script>
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-box">
+      <button id="modal-close" class="modal-close" aria-label="Fermer">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
