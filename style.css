@@ -5,7 +5,7 @@
   --ink-light: #2b3a5c;
   --sand: #f2e9d8;
   --sand-deep: #e8dcc4;
-  --rust: #c1502e;
+  --rust: #a60e59;
   --teal: #1f6650;
   --gold: #d4a017;
   --white: #fffaf2;
@@ -24,7 +24,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--ink);
-  background: var(--sand);
+  background: #ffffff;
   line-height: 1.5;
 }
 
@@ -147,7 +147,17 @@ nav.site-nav a:hover { opacity: 1; }
   max-width: 640px;
 }
 
-.search-panel select,
+.search-panel select {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 11px 14px;
+  border: 1px solid #ddd0b3;
+  border-radius: 8px;
+  background: #e7e7e7;
+  color: var(--ink);
+  flex: 1 1 160px;
+}
+
 .search-panel input {
   font-family: var(--font-body);
   font-size: 0.95rem;
@@ -171,7 +181,7 @@ nav.site-nav a:hover { opacity: 1; }
   transition: background 0.2s;
 }
 
-.search-panel button:hover { background: #a63f22; }
+.search-panel button:hover { background: #850b47; }
 
 /* ---------- Listing section ---------- */
 
@@ -299,7 +309,7 @@ nav.site-nav a:hover { opacity: 1; }
 }
 
 .btn-book {
-  background: var(--teal);
+  background: #a60e59;
   color: var(--white);
   text-decoration: none;
   padding: 9px 16px;
@@ -311,7 +321,7 @@ nav.site-nav a:hover { opacity: 1; }
   transition: background 0.2s;
 }
 
-.btn-book:hover { background: #17503e; }
+.btn-book:hover { background: #de4b93; }
 
 .empty-state {
   text-align: center;
