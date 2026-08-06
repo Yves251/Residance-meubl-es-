@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Yves251/Residance-meubl-es-
   branch: main
+  base_url: https://api.netlify.com
 
 media_folder: "images"
 public_folder: "/images"
