@@ -32,7 +32,10 @@
             "Guide local"
           ],
           "description": "Point de départ idéal pour visiter les Tata Somba et la chaîne de l'Atacora.",
-          "photos": []
+          "photos": [
+            "/images/photo-1566665797739-1674de7a421a.jpg"
+          ],
+          "featured": true
         }
       ]
     },
