@@ -6,6 +6,7 @@ const cityFilter = document.getElementById('city-filter');
 const searchInput = document.getElementById('search-input');
 const searchForm = document.getElementById('search-form');
 const departmentGrid = document.getElementById('department-grid');
+const listingTitle = document.getElementById('listing-title');
 const modalOverlay = document.getElementById('modal-overlay');
 const modalContent = document.getElementById('modal-content');
 
@@ -79,9 +80,13 @@ function renderCardPhotos(g) {
 }
 
 function renderCard(g, index) {
+  const badge = g.featured ? `<span class="badge-featured">En vedette</span>` : '';
   return `
     <article class="card">
-      ${renderCardPhotos(g)}
+      <div class="card-media">
+        ${renderCardPhotos(g)}
+        ${badge}
+      </div>
       <div class="card-body">
         <span class="card-city">${g.city} · ${g.department}</span>
         <h3 class="card-title">${g.name}</h3>
@@ -128,34 +133,45 @@ function closeDetails() {
   modalOverlay.classList.remove('open');
 }
 
-function render(list) {
-  if (list.length === 0) {
-    grid.innerHTML = `<div class="empty-state">Aucune guest house ne correspond à ta recherche pour le moment.</div>`;
+function render(list, hasFilter) {
+  const sorted = [...list].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+
+  if (sorted.length === 0) {
+    grid.innerHTML = hasFilter
+      ? `<div class="empty-state">Aucune guest house ne correspond à ta recherche pour le moment.</div>`
+      : `<div class="empty-state">Aucune guest house mise en avant pour le moment — explore les départements ci-dessus pour voir toutes les guest houses disponibles.</div>`;
   } else {
-    grid.innerHTML = list.map((g, i) => renderCard(g, i)).join('');
+    grid.innerHTML = sorted.map((g, i) => renderCard(g, i)).join('');
   }
-  resultCount.textContent = `${list.length} guest house${list.length > 1 ? 's' : ''}`;
+  resultCount.textContent = `${sorted.length} guest house${sorted.length > 1 ? 's' : ''}`;
 
   grid.querySelectorAll('.btn-details').forEach((btn) => {
-    btn.addEventListener('click', () => openDetails(list[Number(btn.dataset.index)]));
+    btn.addEventListener('click', () => openDetails(sorted[Number(btn.dataset.index)]));
   });
 }
 
 function applyFilters() {
   const department = cityFilter.value;
   const query = searchInput.value.trim().toLowerCase();
+  const hasFilter = Boolean(department || query);
 
-  const filtered = GUEST_HOUSES.filter((g) => {
-    const matchesDepartment = !department || g.department === department;
-    const matchesQuery =
-      !query ||
-      g.name.toLowerCase().includes(query) ||
-      g.city.toLowerCase().includes(query) ||
-      g.department.toLowerCase().includes(query);
-    return matchesDepartment && matchesQuery;
-  });
+  let list;
+  if (!hasFilter) {
+    list = GUEST_HOUSES.filter((g) => g.featured);
+  } else {
+    list = GUEST_HOUSES.filter((g) => {
+      const matchesDepartment = !department || g.department === department;
+      const matchesQuery =
+        !query ||
+        g.name.toLowerCase().includes(query) ||
+        g.city.toLowerCase().includes(query) ||
+        g.department.toLowerCase().includes(query);
+      return matchesDepartment && matchesQuery;
+    });
+  }
 
-  render(filtered);
+  listingTitle.textContent = hasFilter ? 'Résultats' : 'Guest houses en vedette';
+  render(list, hasFilter);
 }
 
 searchForm.addEventListener('submit', (e) => {
@@ -189,7 +205,7 @@ async function init() {
     return;
   }
   populateCityFilter();
-  render(GUEST_HOUSES);
+  applyFilters();
 }
 
 init();

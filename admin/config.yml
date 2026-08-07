@@ -43,6 +43,11 @@ collections:
                 summary: "{{fields.name}} — {{fields.pricePerNight}} FCFA"
                 fields:
                   - { label: "Nom de l'appartement", name: "name", widget: "string" }
+                  - label: "Mis en avant (payant)"
+                    name: "featured"
+                    widget: "boolean"
+                    default: false
+                    hint: "Coche cette case pour les propriétaires qui ont payé la mise en avant — ces annonces remontent en tête de la liste sur le site."
                   - { label: "Ville / Quartier", name: "city", widget: "string" }
                   - { label: "Prix par nuit (FCFA)", name: "pricePerNight", widget: "number", value_type: "int" }
                   - label: "Numéro WhatsApp"

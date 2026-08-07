@@ -305,6 +305,26 @@ nav.site-nav a:hover { opacity: 1; }
 
 .card-photos.single { grid-template-columns: 1fr; }
 
+.card-media {
+  position: relative;
+}
+
+.badge-featured {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--gold);
+  color: var(--ink);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
 .card-photo {
   background: linear-gradient(135deg, var(--rust), var(--rust-dark));
   color: var(--sand-deep);
