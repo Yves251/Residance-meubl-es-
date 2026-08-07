@@ -43,7 +43,7 @@ function renderDepartmentTiles(departments) {
     const photo = dep && dep.photo;
     const img = photo ? `<img src="${photo}" alt="${depName}">` : '';
     return `
-      <button type="button" class="department-tile" data-department="${depName}">
+      <button type="button" class="department-tile${photo ? ' has-photo' : ''}" data-department="${depName}">
         ${img}
         <span>${depName}</span>
       </button>
