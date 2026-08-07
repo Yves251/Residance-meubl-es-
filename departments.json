@@ -2,19 +2,23 @@
   "departments": [
     {
       "name": "Alibori",
-      "photo": "",
+      "photo": "/images/imagzzzzes.jpg",
       "apartments": []
     },
     {
       "name": "Atacora",
-      "photo": "",
+      "photo": "/images/1.png",
       "apartments": [
         {
           "name": "Auberge des Tata Somba",
           "city": "Natitingou",
           "pricePerNight": 14000,
           "whatsapp": "22990000005",
-          "amenities": ["Vue collines", "Petit-déjeuner", "Guide local"],
+          "amenities": [
+            "Vue collines",
+            "Petit-déjeuner",
+            "Guide local"
+          ],
           "description": "Point de départ idéal pour visiter les Tata Somba et la chaîne de l'Atacora.",
           "photos": []
         }
@@ -29,7 +33,11 @@
           "city": "Ganvié",
           "pricePerNight": 30000,
           "whatsapp": "22990000008",
-          "amenities": ["Vue lac", "Restauration", "Transfert pirogue"],
+          "amenities": [
+            "Vue lac",
+            "Restauration",
+            "Transfert pirogue"
+          ],
           "description": "Séjour au bord du lac Nokoué, à proximité de la cité lacustre de Ganvié.",
           "photos": []
         }
@@ -44,7 +52,11 @@
           "city": "Parakou",
           "pricePerNight": 17000,
           "whatsapp": "22990000004",
-          "amenities": ["Wi-Fi", "Climatisation", "Parking"],
+          "amenities": [
+            "Wi-Fi",
+            "Climatisation",
+            "Parking"
+          ],
           "description": "Étape confortable dans le nord, proche de la gare routière et des marchés de Parakou.",
           "photos": []
         }
@@ -59,14 +71,25 @@
           "city": "Dassa-Zoumè",
           "pricePerNight": 16000,
           "whatsapp": "22990000007",
-          "amenities": ["Wi-Fi", "Restauration"],
+          "amenities": [
+            "Wi-Fi",
+            "Restauration"
+          ],
           "description": "Au cœur du pays, entre les collines sacrées et la route vers le nord.",
           "photos": []
         }
       ]
     },
-    { "name": "Couffo", "photo": "", "apartments": [] },
-    { "name": "Donga", "photo": "", "apartments": [] },
+    {
+      "name": "Couffo",
+      "photo": "",
+      "apartments": []
+    },
+    {
+      "name": "Donga",
+      "photo": "",
+      "apartments": []
+    },
     {
       "name": "Littoral",
       "photo": "",
@@ -76,7 +99,12 @@
           "city": "Cotonou",
           "pricePerNight": 25000,
           "whatsapp": "22990000001",
-          "amenities": ["Wi-Fi", "Climatisation", "Petit-déjeuner", "Parking"],
+          "amenities": [
+            "Wi-Fi",
+            "Climatisation",
+            "Petit-déjeuner",
+            "Parking"
+          ],
           "description": "Villa calme à deux pas de la plage de Fidjrossè, chambres climatisées et terrasse commune ombragée.",
           "photos": []
         }
@@ -91,7 +119,10 @@
           "city": "Lokossa",
           "pricePerNight": 13000,
           "whatsapp": "22990000006",
-          "amenities": ["Wi-Fi", "Ventilateur"],
+          "amenities": [
+            "Wi-Fi",
+            "Ventilateur"
+          ],
           "description": "Hébergement simple et accueillant dans le sud-ouest du pays.",
           "photos": []
         }
@@ -106,13 +137,21 @@
           "city": "Porto-Novo",
           "pricePerNight": 15000,
           "whatsapp": "22990000002",
-          "amenities": ["Wi-Fi", "Jardin", "Petit-déjeuner"],
+          "amenities": [
+            "Wi-Fi",
+            "Jardin",
+            "Petit-déjeuner"
+          ],
           "description": "Maison d'hôtes familiale avec jardin, à quelques minutes du Musée Honmè.",
           "photos": []
         }
       ]
     },
-    { "name": "Plateau", "photo": "", "apartments": [] },
+    {
+      "name": "Plateau",
+      "photo": "",
+      "apartments": []
+    },
     {
       "name": "Zou",
       "photo": "",
@@ -122,7 +161,10 @@
           "city": "Abomey",
           "pricePerNight": 12000,
           "whatsapp": "22990000003",
-          "amenities": ["Petit-déjeuner", "Ventilateur"],
+          "amenities": [
+            "Petit-déjeuner",
+            "Ventilateur"
+          ],
           "description": "À deux pas des palais royaux d'Abomey, accueil chaleureux et cuisine locale.",
           "photos": []
         }
