@@ -2,8 +2,20 @@
   "departments": [
     {
       "name": "Alibori",
-      "photo": "/images/imagzzzzes.jpg",
-      "apartments": []
+      "photo": "/images/photo-1503174971373-b1f69850bded.jpg",
+      "apartments": [
+        {
+          "featured": true,
+          "name": "Chambre · Cotonou, Bénin",
+          "city": "fifadji",
+          "pricePerNight": 15000,
+          "whatsapp": "0160112233",
+          "description": "Chambre meublée. situé dans Cotonou,(fifadji) dans la von du commissariat.\nChambre, suites climatisée , ventilée et équipée, douches et cuisines.\nLingeries, meubles et ustensiles de Qualité.\n\nA 15 minutes de la l'aéroport.\n\nA 15 minutes du centre ville et du marché tokpa.\nA 5 minutes du stade de l'amitié, de l'hôpital St Luc et du centre de santé de zogbo.\n\nCabre spacieux, Propre, aéré et sécurisé.\nNB : les charges d'eau et d'électricité sont comprises dans le prix du séjour",
+          "photos": [
+            "/images/photo-1584622781564-1d987f7333c1.jpg"
+          ]
+        }
+      ]
     },
     {
       "name": "Atacora",
@@ -20,13 +32,16 @@
             "Guide local"
           ],
           "description": "Point de départ idéal pour visiter les Tata Somba et la chaîne de l'Atacora.",
-          "photos": []
+          "photos": [
+            "/images/photo-1566665797739-1674de7a421a.jpg"
+          ],
+          "featured": true
         }
       ]
     },
     {
       "name": "Atlantique",
-      "photo": "",
+      "photo": "/images/premium_photo-1671269942067-bb709a81273c.jpg",
       "apartments": [
         {
           "name": "Ganvié Lodge",
@@ -39,7 +54,35 @@
             "Transfert pirogue"
           ],
           "description": "Séjour au bord du lac Nokoué, à proximité de la cité lacustre de Ganvié.",
-          "photos": []
+          "photos": [
+            "/images/photo-1503174971373-b1f69850bded.jpg"
+          ],
+          "featured": true
+        },
+        {
+          "featured": true,
+          "description": "Chambre meublée. situé dans Cotonou,(fifadji) dans la von du commissariat.\nChambre, suites climatisée , ventilée et équipée, douches et cuisines.\nLingeries, meubles et ustensiles de Qualité.\n\nA 15 minutes de la l'aéroport.\n\nA 15 minutes du centre ville et du marché tokpa.\nA 5 minutes du stade de l'amitié, de l'hôpital St Luc et du centre de santé de zogbo.\n\nCabre spacieux, Propre, aéré et sécurisé.\nNB : les charges d'eau et d'électricité sont comprises dans le prix du séjour",
+          "whatsapp": "0198010203",
+          "amenities": [
+            "Wifi Climatiseur Ventilo"
+          ],
+          "photos": [
+            "/images/premium_photo-1676823547752-1d24e8597047.jpg"
+          ],
+          "pricePerNight": 9000,
+          "city": "Zongo",
+          "name": "Chambre salon"
+        },
+        {
+          "featured": true,
+          "description": "Chambre meublée. situé dans Cotonou,(fifadji) dans la von du commissariat.\nChambre, suites climatisée , ventilée et équipée, douches et cuisines.\nLingeries, meubles et ustensiles de Qualité.\n\nA 15 minutes de la l'aéroport.\n\nA 15 minutes du centre ville et du marché tokpa.\nA 5 minutes du stade de l'amitié, de l'hôpital St Luc et du centre de santé de zogbo.\n\nCabre spacieux, Propre, aéré et sécurisé.\nNB : les charges d'eau et d'électricité sont comprises dans le prix du séjour",
+          "whatsapp": "0163010203",
+          "pricePerNight": 12000,
+          "city": "agla",
+          "name": "Marie spece",
+          "amenities": [
+            "WiFi Piscines"
+          ]
         }
       ]
     },
