@@ -29,6 +29,14 @@ function getPhotos(g) {
   return [];
 }
 
+function getAmenities(g) {
+  if (Array.isArray(g.amenities)) return g.amenities;
+  if (typeof g.amenities === 'string' && g.amenities.trim()) {
+    return g.amenities.split(',').map((a) => a.trim()).filter(Boolean);
+  }
+  return [];
+}
+
 function populateCityFilter() {
   DEPARTMENTS.forEach((dep) => {
     const opt = document.createElement('option');
@@ -91,7 +99,7 @@ function renderCard(g, index) {
         <span class="card-city">${g.city} · ${g.department}</span>
         <h3 class="card-title">${g.name}</h3>
         <div class="card-amenities">
-          ${g.amenities.map((a) => `<span class="tag">${a}</span>`).join('')}
+          ${getAmenities(g).map((a) => `<span class="tag">${a}</span>`).join('')}
         </div>
         <div class="card-footer">
           <span class="price">${formatPrice(g.pricePerNight)}<br><small>par nuit</small></span>
@@ -120,7 +128,7 @@ function openDetails(g) {
       <h3>${g.name}</h3>
       <p>${g.description}</p>
       <div class="card-amenities">
-        ${g.amenities.map((a) => `<span class="tag">${a}</span>`).join('')}
+        ${getAmenities(g).map((a) => `<span class="tag">${a}</span>`).join('')}
       </div>
       <span class="price">${formatPrice(g.pricePerNight)}<br><small>par nuit</small></span>
       <a class="btn-book" href="${whatsappLink(g)}" target="_blank" rel="noopener">Demander à réserver</a>

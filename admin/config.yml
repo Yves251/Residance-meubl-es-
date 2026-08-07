@@ -56,12 +56,13 @@ collections:
                     hint: "Format international sans le +, ex: 22990000000"
                   - label: "Caractéristiques"
                     name: "amenities"
-                    widget: "list"
-                    hint: "Un équipement/caractéristique par ligne, ex: Wi-Fi, Climatisation..."
+                    widget: "text"
+                    required: false
+                    hint: "Sépare chaque caractéristique par une virgule, ex: Wi-Fi, Climatisation, Parking"
                   - { label: "Description", name: "description", widget: "text" }
                   - label: "Photos"
                     name: "photos"
-                    widget: "list"
+                    widget: "image"
+                    multiple: true
                     required: false
-                    hint: "Les 2 premières s'affichent sur la fiche, les autres dans le détail."
-                    field: { label: "Photo", name: "image", widget: "image" }
+                    hint: "Sélectionne plusieurs photos en une seule fois (Ctrl ou Cmd + clic). Les 2 premières s'affichent sur la fiche, les autres dans le détail."
