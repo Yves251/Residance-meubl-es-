@@ -2,8 +2,17 @@
   "departments": [
     {
       "name": "Alibori",
-      "photo": "/images/imagzzzzes.jpg",
-      "apartments": []
+      "photo": "/images/photo-1503174971373-b1f69850bded.jpg",
+      "apartments": [
+        {
+          "featured": true,
+          "name": "Chambre · Cotonou, Bénin",
+          "city": "fifadji",
+          "pricePerNight": 15000,
+          "whatsapp": "0160112233",
+          "description": "Chambre meublée. situé dans Cotonou,(fifadji) dans la von du commissariat.\nChambre, suites climatisée , ventilée et équipée, douches et cuisines.\nLingeries, meubles et ustensiles de Qualité.\n\nA 15 minutes de la l'aéroport.\n\nA 15 minutes du centre ville et du marché tokpa.\nA 5 minutes du stade de l'amitié, de l'hôpital St Luc et du centre de santé de zogbo.\n\nCabre spacieux, Propre, aéré et sécurisé.\nNB : les charges d'eau et d'électricité sont comprises dans le prix du séjour"
+        }
+      ]
     },
     {
       "name": "Atacora",
