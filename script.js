@@ -188,7 +188,7 @@ document.getElementById('modal-close').addEventListener('click', closeDetails);
 
 async function init() {
   try {
-    const response = await fetch('departments.json');
+    const response = await fetch(`departments.json?v=${Date.now()}`, { cache: 'no-store' });
     const data = await response.json();
     const departments = data.departments || [];
 
